@@ -1655,6 +1655,22 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 330072026096399867, guid: c612ff6b6633e3e4881d5675668d8d5a, type: 3}
   m_PrefabInstance: {fileID: 785939636}
   m_PrefabAsset: {fileID: 0}
+--- !u!70 &658237926
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 658237925}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.117707215, y: -0.43159723}
+  m_Size: {x: 3.107643, y: 2.3923776}
+  m_Direction: 1
 --- !u!114 &658237929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1669,6 +1685,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   birdWeight: 0.00002
   jumpSpeed: 0.025
+  gameOver: 0
+--- !u!50 &658237931
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 658237925}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &694214842
 GameObject:
   m_ObjectHideFlags: 0

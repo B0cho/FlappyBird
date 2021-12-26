@@ -24,33 +24,36 @@ public class pipesCreator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // pipes instatation
-        if(pipesSetsList.Count < 4)
+        if(!GameObject.Find("Bird").GetComponent<birdBehavior>().isGameOver)
         {
-            // randomize y-position
-            float yPosition = Random.Range(-2f, 2f);
-            Vector3 newPosition = (pipesSetsList.Count == 0) ? 
-                pipeSetInitPos + new Vector3(0, yPosition, 0) : // when creating first pipe set
-                new Vector3(pipesSetsList[pipesSetsList.Count - 1].transform.position.x + pipesInterval, yPosition, 0); // creating upcoming pipes
-            pipesSetsList.Add(InstantiatePipes(newPosition));
-        }
+            // pipes instatation
+            if (pipesSetsList.Count < 4)
+            {
+                // randomize y-position
+                float yPosition = Random.Range(-2f, 2f);
+                Vector3 newPosition = (pipesSetsList.Count == 0) ?
+                    pipeSetInitPos + new Vector3(0, yPosition, 0) : // when creating first pipe set
+                    new Vector3(pipesSetsList[pipesSetsList.Count - 1].transform.position.x + pipesInterval, yPosition, 0); // creating upcoming pipes
+                pipesSetsList.Add(InstantiatePipes(newPosition));
+            }
 
-        // updated of pipes position + finding passed pipes set
-        GameObject passedPipes = null;
-        foreach(GameObject i in pipesSetsList)
-        {
-            // move
-            i.transform.position = new Vector3(i.transform.position.x - pipeSpeed, i.transform.position.y, i.transform.position.z);
-            // passed pipe
-            if (i.transform.position.x < -halfCameraWidth)
-                passedPipes = i;
-        }
+            // updated of pipes position + finding passed pipes set
+            GameObject passedPipes = null;
+            foreach (GameObject i in pipesSetsList)
+            {
+                // move
+                i.transform.position = new Vector3(i.transform.position.x - pipeSpeed, i.transform.position.y, i.transform.position.z);
+                // passed pipe
+                if (i.transform.position.x < -halfCameraWidth)
+                    passedPipes = i;
+            }
 
-        // destroying passed pipes
-        if (passedPipes != null)
-        {
-            pipesSetsList.Remove(passedPipes);
-            Destroy(passedPipes);
+            // destroying passed pipes
+            if (passedPipes != null)
+            {
+                pipesSetsList.Remove(passedPipes);
+                Destroy(passedPipes);
+            }
         }
     }
 

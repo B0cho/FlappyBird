@@ -18,9 +18,12 @@ public class backgroundBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (gameObject.transform.position.x <= -halfCameraWidth)
-            gameObject.transform.position = initPos;
-        else
-            gameObject.transform.position = new Vector3(gameObject.transform.position.x - backgroundSpeed, initPos.y, initPos.z);
+        if(!GameObject.Find("Bird").GetComponent<birdBehavior>().isGameOver)
+        {
+            if (gameObject.transform.position.x <= -halfCameraWidth)
+                gameObject.transform.position = initPos;
+            else
+                gameObject.transform.position = new Vector3(gameObject.transform.position.x - backgroundSpeed, initPos.y, initPos.z);
+        }
     }
 }
