@@ -1667,8 +1667,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19bb1fdcc96d20c4482028a757657b8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  birdWeight: 0.001
-  jumpSpeed: 0.2
+  birdWeight: 0.00002
+  jumpSpeed: 0.025
 --- !u!1 &694214842
 GameObject:
   m_ObjectHideFlags: 0
@@ -1719,7 +1719,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01834ca129fc49f47bfb140f247f0469, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pipeSpeed: 0.001
+  pipeSpeed: 0.01
+  pipesInterval: 10
+  pipesSetPrefab: {fileID: 4191241546315161169, guid: a3d690a4b8616e24894951eb22970ec8, type: 3}
 --- !u!1 &730430708
 GameObject:
   m_ObjectHideFlags: 0
@@ -1957,7 +1959,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 330072026096399868, guid: c612ff6b6633e3e4881d5675668d8d5a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 330072026096399868, guid: c612ff6b6633e3e4881d5675668d8d5a, type: 3}
       propertyPath: m_LocalRotation.w

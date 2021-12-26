@@ -23,7 +23,7 @@ public class birdBehavior : MonoBehaviour
         if (Input.GetKeyDown("space"))
             verticalSpeed = jumpSpeed;
 
-        float newAngle  = Mathf.Atan(verticalSpeed) * 100;
+        float newAngle  = Mathf.Atan(verticalSpeed) * 1000;
         float rotation = newAngle - currentAngle;
         currentAngle = newAngle;             
         
