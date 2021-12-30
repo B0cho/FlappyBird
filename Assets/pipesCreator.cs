@@ -12,6 +12,8 @@ public class pipesCreator : MonoBehaviour
     private Vector3 pipeSetInitPos;
     private List<GameObject> pipesSetsList;
 
+    public List<GameObject> PipesSetsList { get => pipesSetsList; }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +26,7 @@ public class pipesCreator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!GameObject.Find("Bird").GetComponent<birdBehavior>().isGameOver)
+        if(!GameObject.Find("Bird").GetComponent<birdBehavior>().IsGameOver)
         {
             // pipes instatation
             if (pipesSetsList.Count < 4)
@@ -42,7 +44,7 @@ public class pipesCreator : MonoBehaviour
             foreach (GameObject i in pipesSetsList)
             {
                 // move
-                i.transform.position = new Vector3(i.transform.position.x - pipeSpeed, i.transform.position.y, i.transform.position.z);
+                i.transform.position = new Vector3(i.transform.position.x - pipeSpeed * Time.deltaTime, i.transform.position.y, i.transform.position.z);
                 // passed pipe
                 if (i.transform.position.x < -halfCameraWidth)
                     passedPipes = i;

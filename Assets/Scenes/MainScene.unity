@@ -726,7 +726,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da59ed3b7a76bb7488fa6c8fc5861ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  backgroundSpeed: 0.0003
+  backgroundSpeed: 0.1
 --- !u!4 &292070273
 Transform:
   m_ObjectHideFlags: 0
@@ -1683,9 +1683,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19bb1fdcc96d20c4482028a757657b8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  birdWeight: 0.00002
-  jumpSpeed: 0.025
-  gameOver: 0
+  birdWeight: 1
+  jumpSpeed: 5
+  horizontalSpeed: 2
 --- !u!50 &658237931
 Rigidbody2D:
   serializedVersion: 4
@@ -1757,7 +1757,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01834ca129fc49f47bfb140f247f0469, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pipeSpeed: 0.01
+  pipeSpeed: 3
   pipesInterval: 10
   pipesSetPrefab: {fileID: 4191241546315161169, guid: a3d690a4b8616e24894951eb22970ec8, type: 3}
 --- !u!1 &730430708
@@ -1904,7 +1904,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da59ed3b7a76bb7488fa6c8fc5861ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  backgroundSpeed: 0.003
+  backgroundSpeed: 1
 --- !u!212 &768147693
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2566,7 +2566,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da59ed3b7a76bb7488fa6c8fc5861ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  backgroundSpeed: 0.0008
+  backgroundSpeed: 0.2
 --- !u!1 &1006216239
 GameObject:
   m_ObjectHideFlags: 0
@@ -2862,7 +2862,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da59ed3b7a76bb7488fa6c8fc5861ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  backgroundSpeed: 0.0003
+  backgroundSpeed: 0.1
 --- !u!1 &1145920395
 GameObject:
   m_ObjectHideFlags: 0
@@ -3108,7 +3108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da59ed3b7a76bb7488fa6c8fc5861ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  backgroundSpeed: 0.003
+  backgroundSpeed: 1
 --- !u!4 &1225059588
 Transform:
   m_ObjectHideFlags: 0
@@ -3662,7 +3662,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da59ed3b7a76bb7488fa6c8fc5861ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  backgroundSpeed: 0.0008
+  backgroundSpeed: 0.2
 --- !u!4 &1584756961
 Transform:
   m_ObjectHideFlags: 0
