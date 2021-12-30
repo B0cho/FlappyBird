@@ -11,22 +11,25 @@ public class pipesCreator : MonoBehaviour
     private float halfCameraWidth;
     private Vector3 pipeSetInitPos;
     private List<GameObject> pipesSetsList;
-
+    private bool isPaused;
     public List<GameObject> PipesSetsList { get => pipesSetsList; }
-
+    public void OnPause()
+    {
+        isPaused = true;
+    }
     // Start is called before the first frame update
     void Start()
     {
         pipesSetsList = new List<GameObject>();
         halfCameraWidth = Camera.main.orthographicSize * Screen.width / Screen.height + 2;
         pipeSetInitPos = new Vector3(halfCameraWidth, 0, -2);
-
+        isPaused = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(!GameObject.Find("Bird").GetComponent<birdBehavior>().IsGameOver)
+        if(!isPaused)
         {
             // pipes instatation
             if (pipesSetsList.Count < 4)
