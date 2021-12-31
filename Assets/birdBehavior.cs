@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 [System.Serializable]
 public class UnityEventInt : UnityEvent<string> { }
@@ -27,8 +28,8 @@ public class birdBehavior : MonoBehaviour
     {
         verticalSpeed = 0;
         currentAngle = 0;
-        isGamePaused = false;
-        isControlled = true;
+        isGamePaused = true;
+        isControlled = false;
         score = 0;
         lastPassedPipe = null;
     }
@@ -70,6 +71,19 @@ public class birdBehavior : MonoBehaviour
     {
         // collision with pipe, game finished
         isControlled = false;
+        gameObject.GetComponent<Animator>().speed = 0;
         onGameOver.Invoke();
+    }
+
+    public void StartGame()
+    {
+        isGamePaused = false;
+        isControlled = true;
+        gameObject.GetComponent<Animator>().speed = 1;
+    }
+
+    public void ResetGame()
+    {
+        SceneManager.LoadScene("MainScene");
     }
 }

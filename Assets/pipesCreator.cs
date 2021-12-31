@@ -13,9 +13,9 @@ public class pipesCreator : MonoBehaviour
     private List<GameObject> pipesSetsList;
     private bool isPaused;
     public List<GameObject> PipesSetsList { get => pipesSetsList; }
-    public void OnPause()
+    public void Pause(bool toBePaused)
     {
-        isPaused = true;
+        isPaused = toBePaused;
     }
     // Start is called before the first frame update
     void Start()
@@ -23,7 +23,7 @@ public class pipesCreator : MonoBehaviour
         pipesSetsList = new List<GameObject>();
         halfCameraWidth = Camera.main.orthographicSize * Screen.width / Screen.height + 2;
         pipeSetInitPos = new Vector3(halfCameraWidth, 0, -2);
-        isPaused = false;
+        isPaused = true;
     }
 
     // Update is called once per frame
