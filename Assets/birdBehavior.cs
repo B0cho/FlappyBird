@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 
 [System.Serializable]
-public class UnityEventInt : UnityEvent<int> { }
+public class UnityEventInt : UnityEvent<string> { }
 public class birdBehavior : MonoBehaviour
 {
     public float birdWeight;
@@ -61,7 +61,7 @@ public class birdBehavior : MonoBehaviour
                 {
                     lastPassedPipe = i;
                     score++;
-                    onScoreGain.Invoke(score);
+                    onScoreGain.Invoke(score.ToString());
                 }
             }
         }
