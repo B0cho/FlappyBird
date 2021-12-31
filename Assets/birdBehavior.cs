@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -70,9 +69,21 @@ public class birdBehavior : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         // collision with pipe, game finished
+        StopGame();
+    }
+
+    private void StopGame()
+    {
         isControlled = false;
         gameObject.GetComponent<Animator>().speed = 0;
         onGameOver.Invoke();
+    }
+
+    private void OnBecameInvisible()
+    {
+        // bird is out of screen, game finished
+        if (isControlled)
+            StopGame();
     }
 
     public void StartGame()
