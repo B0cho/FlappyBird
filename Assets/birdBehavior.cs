@@ -65,6 +65,10 @@ public class birdBehavior : MonoBehaviour
                 }
             }
         }
+
+        // quiting game on user request
+        if (Input.GetKeyDown("escape"))
+            Application.Quit();
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
